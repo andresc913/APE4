@@ -26,3 +26,25 @@ public class Estudiante {
         }
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante e1 = new Estudiante("Ana", 8, 9, 7);
+        Estudiante e2 = new Estudiante("Luis", 6, 5, 6);
+        Estudiante e3 = new Estudiante("Pedro", 4, 3, 5);
+        Estudiante e4 = new Estudiante("Maria", 9, 8, 10);
+        Estudiante e5 = new Estudiante("Carlos", 7, 7, 6);
+
+        Estudiante[] estudiantes = {e1, e2, e3, e4, e5};
+        int aprobados = 0;
+
+        for (Estudiante e : estudiantes) {
+            e.mostrar();
+            if (e.promedio >= 7.0) {
+                aprobados++;
+            }
+        }
+        System.out.println("Estudiantes aprobados: " + aprobados);
+    }
+}
+
